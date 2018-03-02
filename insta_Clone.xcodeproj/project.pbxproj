@@ -15,6 +15,7 @@
 		90AFDA032048FF9C0042647E /* RootPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90AFDA022048FF9C0042647E /* RootPageViewController.swift */; };
 		90AFDA0520490A430042647E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 90AFDA0420490A430042647E /* GoogleService-Info.plist */; };
 		90AFDA07204911980042647E /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90AFDA06204911980042647E /* SignupViewController.swift */; };
+		90AFDA09204920750042647E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90AFDA08204920750042647E /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		90AFDA022048FF9C0042647E /* RootPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootPageViewController.swift; sourceTree = "<group>"; };
 		90AFDA0420490A430042647E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		90AFDA06204911980042647E /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		90AFDA08204920750042647E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		99BC92FFF06386739CA57506 /* Pods-insta_Clone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-insta_Clone.debug.xcconfig"; path = "Pods/Target Support Files/Pods-insta_Clone/Pods-insta_Clone.debug.xcconfig"; sourceTree = "<group>"; };
 		F3F8B3E05B6E2344CAA0622B /* Pods-insta_Clone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-insta_Clone.release.xcconfig"; path = "Pods/Target Support Files/Pods-insta_Clone/Pods-insta_Clone.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -90,6 +92,7 @@
 				90AFD9FC2048FE730042647E /* Info.plist */,
 				90AFDA022048FF9C0042647E /* RootPageViewController.swift */,
 				90AFDA06204911980042647E /* SignupViewController.swift */,
+				90AFDA08204920750042647E /* LoginViewController.swift */,
 			);
 			path = insta_Clone;
 			sourceTree = "<group>";
@@ -235,6 +238,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90AFDA09204920750042647E /* LoginViewController.swift in Sources */,
 				90AFDA07204911980042647E /* SignupViewController.swift in Sources */,
 				90AFD9F12048FE730042647E /* AppDelegate.swift in Sources */,
 				90AFDA032048FF9C0042647E /* RootPageViewController.swift in Sources */,
