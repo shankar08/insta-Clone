@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>686974996662-gqct2619mnbjc1cceiabpd8q5q1qtlk8.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.686974996662-gqct2619mnbjc1cceiabpd8q5q1qtlk8</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCAb7P4bC41_RZ84wD2_2t2mxHkohGXMqc</string>
+	<key>GCM_SENDER_ID</key>
+	<string>686974996662</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>shankar.champs.insta-Clone</string>
+	<key>PROJECT_ID</key>
+	<string>instapuzzlegram</string>
+	<key>STORAGE_BUCKET</key>
+	<string>instapuzzlegram.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true></true>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false></false>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:686974996662:ios:9677a737d3627b63</string>
+	<key>DATABASE_URL</key>
+	<string>https://instapuzzlegram.firebaseio.com</string>
+</dict>
+</plist>
