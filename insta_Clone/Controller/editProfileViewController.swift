@@ -37,10 +37,15 @@ class editProfileViewController: UIViewController {
                 let returnedData = snapshot.value as? NSDictionary
                 
                 if let imgurl = returnedData?["profileImg"] as? String {
-                   // self.profileImg.
+                    self.profileImg.sd_setImage(with: URL(string: imgurl))
                 }
                 
-                
+                if let userName = returnedData?["username"] as? String {
+                    self.userNameTxtField.text = userName
+                }
+                if let email = returnedData?["email"] as? String {
+                    self.emailTxtField.text = email
+                }
                 
             })
         }
