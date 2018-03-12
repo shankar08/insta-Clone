@@ -17,6 +17,8 @@
 		90AFDA07204911980042647E /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90AFDA06204911980042647E /* SignupViewController.swift */; };
 		90AFDA09204920750042647E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90AFDA08204920750042647E /* LoginViewController.swift */; };
 		9E5FF4662049DF5B00A1AC7E /* AppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5FF4652049DF5B00A1AC7E /* AppViewController.swift */; };
+		9E64DDF82052E07400B32DD4 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E64DDF72052E07400B32DD4 /* ProfileViewController.swift */; };
+		9ED05F7A2056C3D9007BEB1D /* editProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED05F792056C3D9007BEB1D /* editProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +35,8 @@
 		90AFDA08204920750042647E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		99BC92FFF06386739CA57506 /* Pods-insta_Clone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-insta_Clone.debug.xcconfig"; path = "Pods/Target Support Files/Pods-insta_Clone/Pods-insta_Clone.debug.xcconfig"; sourceTree = "<group>"; };
 		9E5FF4652049DF5B00A1AC7E /* AppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewController.swift; sourceTree = "<group>"; };
+		9E64DDF72052E07400B32DD4 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		9ED05F792056C3D9007BEB1D /* editProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = editProfileViewController.swift; sourceTree = "<group>"; };
 		F3F8B3E05B6E2344CAA0622B /* Pods-insta_Clone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-insta_Clone.release.xcconfig"; path = "Pods/Target Support Files/Pods-insta_Clone/Pods-insta_Clone.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -86,18 +90,44 @@
 		90AFD9EF2048FE730042647E /* insta_Clone */ = {
 			isa = PBXGroup;
 			children = (
+				9E64DDF62052E05600B32DD4 /* View */,
+				9E64DDF52052E03800B32DD4 /* Model */,
+				9E64DDF42052E01D00B32DD4 /* Controller */,
 				90AFD9F02048FE730042647E /* AppDelegate.swift */,
-				90AFD9F42048FE730042647E /* Main.storyboard */,
 				90AFD9F72048FE730042647E /* Assets.xcassets */,
-				90AFD9F92048FE730042647E /* LaunchScreen.storyboard */,
 				90AFDA0420490A430042647E /* GoogleService-Info.plist */,
 				90AFD9FC2048FE730042647E /* Info.plist */,
+			);
+			path = insta_Clone;
+			sourceTree = "<group>";
+		};
+		9E64DDF42052E01D00B32DD4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
 				90AFDA022048FF9C0042647E /* RootPageViewController.swift */,
 				90AFDA06204911980042647E /* SignupViewController.swift */,
 				90AFDA08204920750042647E /* LoginViewController.swift */,
 				9E5FF4652049DF5B00A1AC7E /* AppViewController.swift */,
+				9E64DDF72052E07400B32DD4 /* ProfileViewController.swift */,
+				9ED05F792056C3D9007BEB1D /* editProfileViewController.swift */,
 			);
-			path = insta_Clone;
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		9E64DDF52052E03800B32DD4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9E64DDF62052E05600B32DD4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				90AFD9F92048FE730042647E /* LaunchScreen.storyboard */,
+				90AFD9F42048FE730042647E /* Main.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -183,7 +213,7 @@
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -218,6 +248,7 @@
 				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
@@ -226,6 +257,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -241,7 +273,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E64DDF82052E07400B32DD4 /* ProfileViewController.swift in Sources */,
 				9E5FF4662049DF5B00A1AC7E /* AppViewController.swift in Sources */,
+				9ED05F7A2056C3D9007BEB1D /* editProfileViewController.swift in Sources */,
 				90AFDA09204920750042647E /* LoginViewController.swift in Sources */,
 				90AFDA07204911980042647E /* SignupViewController.swift in Sources */,
 				90AFD9F12048FE730042647E /* AppDelegate.swift in Sources */,

@@ -48,7 +48,9 @@ class SignupViewController: UIViewController {
     func createProfile(_ user: User) {
         let userName = user.email?.components(separatedBy: "@")
         let newUser = ["username": userName![0],
-            "email":user.email]
+            "email":user.email,
+            "profileImg" : "https://firebasestorage.googleapis.com/v0/b/instapuzzlegram.appspot.com/o/dog.png?alt=media&token=ea20e33d-8f0b-4771-8965-c7be9092aa4e"
+        ]
         
         self.databaseRef.child("profiles").child(user.uid).updateChildValues(newUser) {
             (error, ref) in
