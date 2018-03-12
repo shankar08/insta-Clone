@@ -16,8 +16,13 @@
 		</dict>
 		<key>GoogleToolboxForMac.xcscheme</key>
 		<dict>
+<<<<<<< HEAD
 			<key>isShown</key>
 			<false/>
+=======
+			<key>orderHint</key>
+			<integer>1</integer>
+>>>>>>> 3e9609200dcd5b4aa410740442ef642b110e5def
 		</dict>
 		<key>Pods-insta_Clone.xcscheme</key>
 		<dict>
