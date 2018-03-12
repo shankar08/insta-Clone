@@ -16,6 +16,8 @@
 		90AFDA0520490A430042647E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 90AFDA0420490A430042647E /* GoogleService-Info.plist */; };
 		90AFDA07204911980042647E /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90AFDA06204911980042647E /* SignupViewController.swift */; };
 		90AFDA09204920750042647E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90AFDA08204920750042647E /* LoginViewController.swift */; };
+		9E285FB82057176400E91CF3 /* CamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E285FB72057176400E91CF3 /* CamViewController.swift */; };
+		9E285FBA20571E6800E91CF3 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E285FB920571E6800E91CF3 /* Post.swift */; };
 		9E5FF4662049DF5B00A1AC7E /* AppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5FF4652049DF5B00A1AC7E /* AppViewController.swift */; };
 		9E64DDF82052E07400B32DD4 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E64DDF72052E07400B32DD4 /* ProfileViewController.swift */; };
 		9ED05F7A2056C3D9007BEB1D /* editProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED05F792056C3D9007BEB1D /* editProfileViewController.swift */; };
@@ -34,6 +36,8 @@
 		90AFDA06204911980042647E /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		90AFDA08204920750042647E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		99BC92FFF06386739CA57506 /* Pods-insta_Clone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-insta_Clone.debug.xcconfig"; path = "Pods/Target Support Files/Pods-insta_Clone/Pods-insta_Clone.debug.xcconfig"; sourceTree = "<group>"; };
+		9E285FB72057176400E91CF3 /* CamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CamViewController.swift; sourceTree = "<group>"; };
+		9E285FB920571E6800E91CF3 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		9E5FF4652049DF5B00A1AC7E /* AppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewController.swift; sourceTree = "<group>"; };
 		9E64DDF72052E07400B32DD4 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		9ED05F792056C3D9007BEB1D /* editProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = editProfileViewController.swift; sourceTree = "<group>"; };
@@ -110,6 +114,7 @@
 				9E5FF4652049DF5B00A1AC7E /* AppViewController.swift */,
 				9E64DDF72052E07400B32DD4 /* ProfileViewController.swift */,
 				9ED05F792056C3D9007BEB1D /* editProfileViewController.swift */,
+				9E285FB72057176400E91CF3 /* CamViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -117,6 +122,7 @@
 		9E64DDF52052E03800B32DD4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				9E285FB920571E6800E91CF3 /* Post.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -275,9 +281,11 @@
 			files = (
 				9E64DDF82052E07400B32DD4 /* ProfileViewController.swift in Sources */,
 				9E5FF4662049DF5B00A1AC7E /* AppViewController.swift in Sources */,
+				9E285FB82057176400E91CF3 /* CamViewController.swift in Sources */,
 				9ED05F7A2056C3D9007BEB1D /* editProfileViewController.swift in Sources */,
 				90AFDA09204920750042647E /* LoginViewController.swift in Sources */,
 				90AFDA07204911980042647E /* SignupViewController.swift in Sources */,
+				9E285FBA20571E6800E91CF3 /* Post.swift in Sources */,
 				90AFD9F12048FE730042647E /* AppDelegate.swift in Sources */,
 				90AFDA032048FF9C0042647E /* RootPageViewController.swift in Sources */,
 			);

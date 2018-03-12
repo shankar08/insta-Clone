@@ -103,17 +103,103 @@
         <!--Camera-->
         <scene sceneID="iQW-cc-Atb">
             <objects>
-                <viewController restorationIdentifier="CamVC" storyboardIdentifier="CamVC" title="Camera" id="EEY-lQ-AOw" sceneMemberID="viewController">
+                <viewController restorationIdentifier="CamVC" storyboardIdentifier="CamVC" title="Camera" id="EEY-lQ-AOw" customClass="CamViewController" customModule="insta_Clone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Kph-nI-oFa">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.44058074528109847" green="0.8104912363743616" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WKh-58-3xM">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="zVa-Oa-Zpk"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem title="Photo" id="Tng-U4-Hzy">
+                                        <connections>
+                                            <action selector="onPhotoBtnPressed:" destination="EEY-lQ-AOw" id="5Bg-3S-GMO"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="aWB-4e-1hA"/>
+                                    <barButtonItem title="Gallery" id="V8m-UE-9d6">
+                                        <connections>
+                                            <action selector="onGalleryBtnPressed:" destination="EEY-lQ-AOw" id="4dH-Kl-jBf"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xVc-VT-pE2">
+                                <rect key="frame" x="0.0" y="20" width="375" height="45"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ztb-op-UDp">
+                                        <rect key="frame" x="315" y="7" width="40" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="hDm-eS-lfB"/>
+                                        </constraints>
+                                        <state key="normal" title="Share"/>
+                                        <connections>
+                                            <action selector="onShareBtnPressed:" destination="EEY-lQ-AOw" eventType="touchUpInside" id="U5J-Ug-nsm"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uvn-7w-wod">
+                                        <rect key="frame" x="20" y="7" width="48" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="y8y-u7-zVL"/>
+                                        </constraints>
+                                        <state key="normal" title="Cancel"/>
+                                        <connections>
+                                            <action selector="onCancelBtnPressed:" destination="EEY-lQ-AOw" eventType="touchUpInside" id="N0X-Uo-Ejs"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="ztb-op-UDp" firstAttribute="centerY" secondItem="xVc-VT-pE2" secondAttribute="centerY" id="04l-4W-n8i"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="uvn-7w-wod" secondAttribute="trailing" constant="20" symbolic="YES" id="Bqf-kr-7Qv"/>
+                                    <constraint firstItem="ztb-op-UDp" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="xVc-VT-pE2" secondAttribute="leading" constant="20" symbolic="YES" id="JcO-x8-Kpf"/>
+                                    <constraint firstAttribute="trailing" secondItem="ztb-op-UDp" secondAttribute="trailing" constant="20" id="Ohh-S0-hfL"/>
+                                    <constraint firstItem="uvn-7w-wod" firstAttribute="centerY" secondItem="xVc-VT-pE2" secondAttribute="centerY" id="Znt-rZ-drT"/>
+                                    <constraint firstAttribute="height" constant="45" id="g5M-JR-26b"/>
+                                    <constraint firstItem="uvn-7w-wod" firstAttribute="leading" secondItem="xVc-VT-pE2" secondAttribute="leading" constant="20" id="hm5-Ru-d5v"/>
+                                </constraints>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="40H-Xs-OfG">
+                                <rect key="frame" x="0.0" y="65" width="375" height="375"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="375" id="o5H-3g-XVV"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Write Something ...." adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ft7-ov-p5D">
+                                <rect key="frame" x="0.0" y="440" width="375" height="183"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="40H-Xs-OfG" firstAttribute="leading" secondItem="4kw-2w-xbl" secondAttribute="leading" id="BE3-Ig-I3F"/>
+                            <constraint firstItem="xVc-VT-pE2" firstAttribute="trailing" secondItem="4kw-2w-xbl" secondAttribute="trailing" id="Kna-cM-Q9b"/>
+                            <constraint firstItem="ft7-ov-p5D" firstAttribute="top" secondItem="40H-Xs-OfG" secondAttribute="bottom" id="UJ5-XI-blx"/>
+                            <constraint firstItem="40H-Xs-OfG" firstAttribute="top" secondItem="xVc-VT-pE2" secondAttribute="bottom" id="VmE-Cb-86y"/>
+                            <constraint firstItem="WKh-58-3xM" firstAttribute="leading" secondItem="4kw-2w-xbl" secondAttribute="leading" id="ZsD-3r-DZN"/>
+                            <constraint firstItem="WKh-58-3xM" firstAttribute="top" secondItem="ft7-ov-p5D" secondAttribute="bottom" id="htR-e7-d3A"/>
+                            <constraint firstItem="xVc-VT-pE2" firstAttribute="leading" secondItem="4kw-2w-xbl" secondAttribute="leading" id="igp-ix-pfp"/>
+                            <constraint firstItem="xVc-VT-pE2" firstAttribute="top" secondItem="4kw-2w-xbl" secondAttribute="top" id="n5i-gE-pj1"/>
+                            <constraint firstItem="WKh-58-3xM" firstAttribute="trailing" secondItem="4kw-2w-xbl" secondAttribute="trailing" id="qS9-D2-fF4"/>
+                            <constraint firstItem="40H-Xs-OfG" firstAttribute="trailing" secondItem="4kw-2w-xbl" secondAttribute="trailing" id="rzF-5Z-HDs"/>
+                            <constraint firstItem="ft7-ov-p5D" firstAttribute="trailing" secondItem="4kw-2w-xbl" secondAttribute="trailing" id="v0g-m0-UwE"/>
+                            <constraint firstItem="WKh-58-3xM" firstAttribute="bottom" secondItem="4kw-2w-xbl" secondAttribute="bottom" id="wWh-1w-niv"/>
+                            <constraint firstItem="ft7-ov-p5D" firstAttribute="leading" secondItem="4kw-2w-xbl" secondAttribute="leading" id="zbr-Cv-So3"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="4kw-2w-xbl"/>
                     </view>
+                    <connections>
+                        <outlet property="pickedImage" destination="40H-Xs-OfG" id="vUa-53-j2v"/>
+                        <outlet property="textInputField" destination="ft7-ov-p5D" id="1iP-5F-JFf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Kr-yD-xjp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="486" y="-258"/>
+            <point key="canvasLocation" x="485.60000000000002" y="-258.62068965517244"/>
         </scene>
         <!--Message-->
         <scene sceneID="RkB-TH-NXj">
