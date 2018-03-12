@@ -21,8 +21,12 @@ class ProfileViewController: UIViewController {
         super.viewDidLoad()
         
         databaseRef = Database.database().reference()
-        loadProflieInfo()
+        
 
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        loadProflieInfo()
     }
 
     func loadProflieInfo(){

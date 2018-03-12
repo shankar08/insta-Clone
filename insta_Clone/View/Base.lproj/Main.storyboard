@@ -189,7 +189,7 @@
                                                     <segue destination="MWh-Dv-HrQ" kind="show" id="FHR-7f-7HL"/>
                                                 </connections>
                                             </button>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cSO-b0-kLW">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cSO-b0-kLW">
                                                 <rect key="frame" x="30" y="15" width="95" height="95"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="95" id="rOo-HY-Eel"/>
@@ -253,7 +253,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QRv-P0-AlA">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QRv-P0-AlA">
                                 <rect key="frame" x="103" y="144" width="168" height="168"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="QRv-P0-AlA" secondAttribute="height" multiplier="1:1" id="3PI-OC-F3r"/>

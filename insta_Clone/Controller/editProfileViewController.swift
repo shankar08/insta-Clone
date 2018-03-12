@@ -10,7 +10,7 @@ import UIKit
 import Firebase
 import SDWebImage
 
-class editProfileViewController: UIViewController {
+class editProfileViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     @IBOutlet weak var profileImg: UIImageView!
     @IBOutlet weak var userNameTxtField: UITextField!
@@ -54,6 +54,52 @@ class editProfileViewController: UIViewController {
     
     
     @IBAction func onOkBtnPressed(_ sender: Any) {
+        updateUserProfileData()
+    }
+    
+    func updateUserProfileData(){
+        
+        if let userID = Auth.auth().currentUser?.uid {
+            
+            let storageItem = storageRef.child("profile_images").child(userID)
+            
+            guard let profileImage = self.profileImg.image else {return}
+            
+            if let newImage = UIImagePNGRepresentation(profileImage) {
+            
+                storageItem.putData(newImage, metadata: nil, completion: { (metaData, error) in
+                    if error != nil {
+                        print(error?.localizedDescription)
+                        return
+                    }
+                    
+                    storageItem.downloadURL(completion: { (url, error) in
+                        if error != nil {
+                            print(error?.localizedDescription)
+                            return
+                        }
+                        if let photoURL = url?.absoluteString {
+                            guard let userName = self.userNameTxtField.text else {return}
+                            guard let email = self.emailTxtField.text else {return}
+                            
+                            let newValues = ["username": userName,
+                                             "email":email,
+                                             "profileImg" : photoURL
+                            ]
+                            self.databaseRef.child("profiles").child(userID).updateChildValues(newValues, withCompletionBlock: { (error, reference) in
+                                if error != nil {
+                                    print(error?.localizedDescription)
+                                    return
+                                }
+                                print("Profile successfully updated")
+                            })
+                        }
+                    })
+                })
+               // storageItem
+            }
+            
+        }
     }
     
     @IBAction func onCancelBtnPressed(_ sender: Any) {
@@ -62,6 +108,31 @@ class editProfileViewController: UIViewController {
     
     
     @IBAction func onChangeImageBtnPressed(_ sender: Any) {
+        
+        let picker = UIImagePickerController()
+        
+         picker.delegate = self
+        picker.allowsEditing = false
+        picker.sourceType = .photoLibrary
+        picker.mediaTypes = UIImagePickerController.availableMediaTypes(for: .photoLibrary)!
+        
+        present(picker, animated: true, completion: nil)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        
+        var choosenImage = UIImage()
+        
+         choosenImage = (info[UIImagePickerControllerOriginalImage] as? UIImage)!
+        
+        profileImg.image = choosenImage
+        
+        dismiss(animated: true, completion: nil)
+        
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        dismiss(animated: true, completion: nil)
     }
     
 }
