@@ -35,10 +35,10 @@ class SignupViewController: UIViewController {
                 return
             }else {
                 self.createProfile(user!)
-                let loginVC = LoginViewController()
-                self.present(loginVC, animated: true, completion: nil)
-//                let homePVC = RootPageViewController()
-//                self.present(homePVC, animated: true, completion: nil)
+//                let loginVC = LoginViewController()
+//                self.present(loginVC, animated: true, completion: nil)
+                let homePVC = RootPageViewController()
+                self.present(homePVC, animated: true, completion: nil)
             }
         }
 
@@ -47,23 +47,19 @@ class SignupViewController: UIViewController {
     
     func createProfile(_ user: User) {
         let userName = user.email?.components(separatedBy: "@")
-        let newUser = ["username": userName![0],
-            "email":user.email,
-            "profileImg" : "https://firebasestorage.googleapis.com/v0/b/instapuzzlegram.appspot.com/o/dog.png?alt=media&token=ea20e33d-8f0b-4771-8965-c7be9092aa4e"
-        ]
         
-        self.databaseRef.child("profiles").child(user.uid).updateChildValues(newUser) {
+        let newUser = Person(bio: "", display: userName![0], email: user.email!, photo: "https://firebasestorage.googleapis.com/v0/b/instapuzzlegram.appspot.com/o/dog.png?alt=media&token=33462e46-b7df-4d82-bd7f-209af0c8250b", username: userName![0])
+        
+        self.databaseRef.child("profiles").child(user.uid).updateChildValues(newUser.getUserAsDictionary()) {
             (error, ref) in
             if error != nil {
                 print(error?.localizedDescription)
                 return
             }
             print("Profile successfully created")
-            
+
         }
-        
-        
-        
+    
     }
     func setupProfile(){
         //TODO: Create user profile

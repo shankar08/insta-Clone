@@ -10,4 +10,15 @@ import Foundation
 
 class Post {
     
+    var profilePic : String
+    var username : String
+    var postImage  : String
+    
+    init(profilePic : String, username : String, postImage : String) {
+        self.profilePic = profilePic
+        self.username = username
+        self.postImage = postImage
+        
+    }
+    
 }

@@ -36,7 +36,7 @@ class ProfileViewController: UIViewController {
                 
                 let returnedData = snapshot.value as? NSDictionary
                 let userName = returnedData?["username"] as? String ?? "username"
-                if let imgurl = returnedData?["profileImg"] as? String {
+                if let imgurl = returnedData?["photo"] as? String {
                     let url = URL(string: imgurl)
                     URLSession.shared.dataTask(with: url!, completionHandler: { (data, response, error) in
                         if error != nil {

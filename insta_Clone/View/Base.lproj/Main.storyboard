@@ -114,13 +114,13 @@
                                     <constraint firstAttribute="height" constant="44" id="zVa-Oa-Zpk"/>
                                 </constraints>
                                 <items>
-                                    <barButtonItem title="Photo" id="Tng-U4-Hzy">
+                                    <barButtonItem title="Take Photo" id="Tng-U4-Hzy">
                                         <connections>
                                             <action selector="onPhotoBtnPressed:" destination="EEY-lQ-AOw" id="5Bg-3S-GMO"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="aWB-4e-1hA"/>
-                                    <barButtonItem title="Gallery" id="V8m-UE-9d6">
+                                    <barButtonItem title="Choose from Gallery" id="V8m-UE-9d6">
                                         <connections>
                                             <action selector="onGalleryBtnPressed:" destination="EEY-lQ-AOw" id="4dH-Kl-jBf"/>
                                         </connections>

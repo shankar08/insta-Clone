@@ -12,10 +12,12 @@ class CamViewController: UIViewController, UITextViewDelegate, UIImagePickerCont
 
     @IBOutlet weak var pickedImage: UIImageView!
     @IBOutlet weak var textInputField: UITextView!
+    
+    let picker = UIImagePickerController()
     override func viewDidLoad() {
         super.viewDidLoad()
         textInputField.delegate = self
-
+        picker.delegate = self
 
     }
     override func viewWillAppear(_ animated: Bool) {
@@ -48,22 +50,28 @@ class CamViewController: UIViewController, UITextViewDelegate, UIImagePickerCont
         dismiss(animated: true, completion: nil)
     }
     
+   //when the takephoto button is pressed
+    
     @IBAction func onPhotoBtnPressed(_ sender: Any) {
-        let picker = UIImagePickerController()
-        
-        picker.delegate = self
-        picker.allowsEditing = false
-        picker.sourceType = .camera
-        picker.mediaTypes = UIImagePickerController.availableMediaTypes(for: .camera)!
-        
-        present(picker, animated: true, completion: nil)
+        if UIImagePickerController.isSourceTypeAvailable(.camera){
+            picker.allowsEditing = false
+            picker.sourceType = UIImagePickerControllerSourceType.camera
+            picker.cameraCaptureMode = UIImagePickerControllerCameraCaptureMode.photo
+            picker.modalPresentationStyle = .fullScreen
+            present(picker, animated: true, completion: nil)
+        }else {
+            let alertVC = UIAlertController(title: "No hardware ", message: "Your device doesnot have a physical camera", preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+            alertVC.addAction(okAction)
+            present(alertVC, animated: true, completion: nil)
+        }
         
         
     }
     @IBAction func onGalleryBtnPressed(_ sender: Any) {
-        let picker = UIImagePickerController()
+       // let picker = UIImagePickerController()
         
-        picker.delegate = self
+        
         picker.allowsEditing = false
         picker.sourceType = .photoLibrary
         picker.mediaTypes = UIImagePickerController.availableMediaTypes(for: .photoLibrary)!

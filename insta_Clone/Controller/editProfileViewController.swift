@@ -36,7 +36,7 @@ class editProfileViewController: UIViewController, UIImagePickerControllerDelega
                 
                 let returnedData = snapshot.value as? NSDictionary
                 
-                if let imgurl = returnedData?["profileImg"] as? String {
+                if let imgurl = returnedData?["photo"] as? String {
                     self.profileImg.sd_setImage(with: URL(string: imgurl))
                 }
                 
@@ -84,7 +84,7 @@ class editProfileViewController: UIViewController, UIImagePickerControllerDelega
                             
                             let newValues = ["username": userName,
                                              "email":email,
-                                             "profileImg" : photoURL
+                                             "photo" : photoURL
                             ]
                             self.databaseRef.child("profiles").child(userID).updateChildValues(newValues, withCompletionBlock: { (error, reference) in
                                 if error != nil {
